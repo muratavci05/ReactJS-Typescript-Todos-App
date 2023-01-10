@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
-import TodoSlice from "./slice/TodoSlice";
+import TodoSlice from "../features/TodoSlice";
 
 const store = configureStore ({
     reducer: {
@@ -10,7 +10,10 @@ const store = configureStore ({
 
 export default store;
 
-export type RootState = ReturnType<typeof store.getState>;
+// yukarıda ki reducer içinde statelerin type'ları otomatik olarak sliceleden alınarak
+// tek bir rootstate type olarak döndürülüyor
+export type RootState = ReturnType<typeof store.getState>; 
+//appdispatch type
 export type AppDispatch = typeof store.dispatch;
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();

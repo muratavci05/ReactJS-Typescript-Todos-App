@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { add } from "../Redux/slice/TodoSlice";
-import { useAppDispatch } from "../Redux/store";
+import { add } from "../features/TodoSlice";
+import { useAppDispatch } from "../store";
 
 function Todo () {
     const [title, setTitle] = useState("");
@@ -18,7 +18,7 @@ function Todo () {
         <input 
             name="title"
             value={title}
-            onchange={(e) => setTitle(e.currentTarget.value)}
+            onChange={(e) => setTitle(e.currentTarget.value)}
         /> 
         <button onClick ={onSave}> Save </button>
 <ul>
