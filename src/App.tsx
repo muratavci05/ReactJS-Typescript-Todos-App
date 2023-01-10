@@ -29,7 +29,9 @@ function App() {
       <h1 className="titleTodos p-4"><span style={{color:"brown"}}>TypeScript with </span>TODO'S</h1>
       </Marquee>
       
-      <div className="input-group mb-3">
+      <div className="input-group mb-3"
+      
+      >
         <input
           name="title"
           value={title}
@@ -65,13 +67,17 @@ function App() {
                 <button className="btn btn-outline-primary "
                 onClick={()=>toggle(todo.id)}
                 >
-                  {todo.completed ? "uncompleted" : "Done"}
+                  {todo.completed ? "Done" : "Doing"}
                 </button>
                 <button className="btn btn-outline-danger" onClick={()=>onDelete(todo.id)}>Delete</button>
               </li>
             ))}
           </ul>
           </div>
+          <footer style={{marginTop:"400px",position:"relative",display:"flex",justifyContent:"center"}}>
+            <a href="https://github.com/muratavci05"><img style={{width:"35px",cursor:"pointer"}} src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/></a>
+            <a href="https://www.linkedin.com/in/muratavci05/"><img style={{width:"35px",marginLeft:"10px",cursor:"pointer"}}src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"/></a>
+          </footer>
     </div>
   );
 }
