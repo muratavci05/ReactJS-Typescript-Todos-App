@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-
+### ReactJS TypeScript and Redux-Toolkit; a simple todos app
 
 
 
